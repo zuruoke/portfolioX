@@ -7,7 +7,7 @@ import 'package:velocity_x/velocity_x.dart';
 class HeaderScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    final nameWidget = "Pawan\nKumar."
+    final nameWidget = "Zuruoke\nOkafor."
         .text
         .white
         .xl6
@@ -77,7 +77,7 @@ class IntroductionWidget extends StatelessWidget {
         [
           " - Introduction".text.gray500.widest.sm.make(),
           10.heightBox,
-          "@googledevexpert for Flutter, Firebase, Dart & Web.\nPublic Speaker, Blogger, Entrepreneur & YouTuber.\nFounder of MTechViral."
+          "@googledevexpert for Flutter, Firebase, Dart & Tensorflow.\nData Scientist, Mobile App Developer and Content Creator"
               .text
               .white
               .xl3
@@ -90,13 +90,13 @@ class IntroductionWidget extends StatelessWidget {
         ].vStack(),
         RaisedButton(
           onPressed: () {
-            launch("https://mtechviral.com");
+            launch("https://sportzlite.com");
           },
           hoverColor: Vx.purple700,
           shape: Vx.roundedSm,
           color: Coolors.accentColor,
           textColor: Coolors.primaryColor,
-          child: "Visit mtechviral.com".text.make(),
+          child: "Visit sportzlite.com".text.make(),
         ).h(50)
       ],
       // crossAlignment: CrossAxisAlignment.center,
@@ -132,7 +132,7 @@ class PictureWidget extends StatelessWidget {
       origin: Offset(context.percentWidth * 2, 0),
       transform: Matrix4.rotationY(pi),
       child: Image.asset(
-        "assets/pic.png",
+        "assets/dev.png",
         fit: BoxFit.cover,
         height: context.percentHeight * 60,
       ),
@@ -148,28 +148,28 @@ class SocialAccounts extends StatelessWidget {
         Icons.ac_unit_outlined,
         color: Colors.white,
       ).mdClick(() {
-        launch("https://twitter.com/imthepk");
+        launch("https://twitter.com/zuruoke");
       }).make(),
       20.widthBox,
       Icon(
         Icons.ac_unit_outlined,
         color: Colors.white,
       ).mdClick(() {
-        launch("https://instagram.com/codepur_ka_superhero");
+        launch("https://instagram.com/");
       }).make(),
       20.widthBox,
       Icon(
         Icons.ac_unit_outlined,
         color: Colors.white,
       ).mdClick(() {
-        launch("https://youtube.com/mtechviral");
+        launch("https://youtube.com");
       }).make(),
       20.widthBox,
       Icon(
         Icons.ac_unit_outlined,
         color: Colors.white,
       ).mdClick(() {
-        launch("https://github.com/iampawan");
+        launch("https://github.com/zuruoke");
       }).make()
     ].hStack();
   }
