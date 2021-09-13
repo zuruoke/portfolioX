@@ -13,7 +13,7 @@ class FooterScreen extends StatelessWidget {
             [
               "Got a project?\nLet's talk.".text.center.white.xl2.make(),
               10.heightBox,
-              "mtechviral@gmail.com"
+              "zuruoke.okafor@gmail.com"
                   .text
                   .color(Coolors.accentColor)
                   .semiBold
@@ -30,7 +30,7 @@ class FooterScreen extends StatelessWidget {
             [
               "Got a project?\nLet's talk.".text.center.white.xl2.make(),
               10.widthBox,
-              "mtechviral@gmail.com"
+              "zuruoke.okafor@gmail.com"
                   .text
                   .color(Coolors.accentColor)
                   .semiBold
@@ -53,7 +53,7 @@ class FooterScreen extends StatelessWidget {
         SocialAccounts(),
         30.heightBox,
         [
-          "Made in India with".text.red500.make(),
+          "Made with Flutter Web".text.red500.make(),
           10.widthBox,
           Icon(
             Icons.ac_unit_outlined,

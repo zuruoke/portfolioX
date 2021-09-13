@@ -22,33 +22,44 @@ class MiddleScreen extends StatelessWidget {
               enlargeCenterPage: true,
               scrollDirection: Axis.horizontal,
               items: [
-                ProjectWidget(title: "Frontier Wallet"),
-                ProjectWidget(title: "Click2Chat"),
-                ProjectWidget(title: "QArt Fashion"),
-                ProjectWidget(title: "ReadyO"),
-                ProjectWidget(title: "Payoye"),
+                ProjectWidget(title: _widget('CashPoint', 'assets/logo.png')),
+                ProjectWidget(
+                    title: _widget('CashPoint Driver', 'assets/logo.png')),
+                ProjectWidget(title: _widget('Atains', 'assets/atains.png')),
+                ProjectWidget(title: _widget('Reminisce', 'assets/logo.png')),
+                ProjectWidget(title: _widget('Watermark', 'assets/logo.png')),
+                ProjectWidget(title: _widget('Sportzlite', 'assets/logo.png')),
               ],
-              height: 170,
-              viewportFraction: context.isMobile ? 0.75 : 0.4,
+              height: 200,
+              viewportFraction: context.isMobile ? 0.75 : 0.5,
               autoPlay: true,
               autoPlayAnimationDuration: 1.seconds,
             ))
           ]).p64().h(context.isMobile ? 500 : 300),
     );
   }
+
+  _widget(String text, String imagePath) {
+    return Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+      text.text.bold.white.xl.wide.center.make(),
+      const SizedBox(
+        height: 10,
+      ),
+      Image.asset(
+        imagePath,
+        height: 50,
+      ),
+    ]);
+  }
 }
 
 class ProjectWidget extends StatelessWidget {
-  final String title;
+  final Widget title;
 
   const ProjectWidget({Key? key, required this.title}) : super(key: key);
   @override
   Widget build(BuildContext context) {
-    return title.text.bold.white.xl.wide.center
-        .make()
-        .box
-        .p8
-        .roundedLg
+    return title.box.p8.roundedLg
         .neumorphic(color: Vx.purple700, elevation: 5, curve: VxCurve.flat)
         .alignCenter
         .square(200)
